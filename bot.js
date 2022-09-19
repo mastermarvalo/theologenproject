@@ -13,7 +13,7 @@ function respond() {
     this.res.end();
   } else if(request.name == "Christiaan Smith") {
     this.res.writeHead(200);
-    postMessage(request);
+    postMessage(this.req.chunks[0]);
     this.res.end();
   } else {
     console.log("don't care");

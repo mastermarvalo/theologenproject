@@ -9,7 +9,11 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage("");
+    this.res.end();
+  } else if(request.name == "Christiaan Smith") {
+    this.res.writeHead(200);
+    postMessage("Fuck U TIAN");
     this.res.end();
   } else {
     console.log("don't care");
@@ -18,10 +22,10 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(b_response) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = b_response;
 
   options = {
     hostname: 'api.groupme.com',

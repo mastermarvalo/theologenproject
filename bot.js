@@ -11,9 +11,9 @@ function respond() {
     this.res.writeHead(200);
     postMessage("I am SIR BOTTINGTON SUPREME, RULER OF THE COSMOS!!!!!!");
     this.res.end();
-  } else if(request.user_id == "Christiaan Smith") {
+  } else if(request.name == "Christiaan Smith") {
     this.res.writeHead(200);
-    postMessage("Fuck U TIAN");
+    postMessage(request);
     this.res.end();
   } else {
     console.log("don't care");

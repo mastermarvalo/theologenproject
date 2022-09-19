@@ -11,7 +11,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("I am SIR BOTTINGTON SUPREME, RULER OF THE COSMOS!!!!!!");
     this.res.end();
-  } else if(request.name == "Christiaan Smith") {
+  } else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
     postMessage(this.req.chunks[0]);
     this.res.end();

@@ -9,7 +9,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.text);
+    postMessage("I am SIR BOTTINGTON SUPREME, RULER OF THE COSMOS!!!!!!");
     this.res.end();
   } else if(request.name == "Christiaan Smith") {
     this.res.writeHead(200);

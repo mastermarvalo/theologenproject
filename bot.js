@@ -5,13 +5,20 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/sir bot$/; 
+      botRegex = /^\/sir bot$/,
+       jewRegex = /^\/Sam Bloomburg$/; 
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("I am SIR BOTTINGTON SUPREME, RULER OF THE COSMOS!!!!!!");
     this.res.end();
-  } else if(request.sender_id == "28940258") {
+  }
+  else if(request.test && jewRegex.test(request.text)) {
+  this.res.writeHead(200);
+  postMessage("The jews are in the floorboards");
+  this.res.end()
+}
+  else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
     postMessage(this.req.chunks[0]);
     this.res.end();

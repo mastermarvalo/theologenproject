@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/sir bot$/,
-       jewRegex = /^\/Sam Bloomburg$/; 
+      jewRegex = /^\/Sam Bloomburg$/; 
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -20,7 +20,7 @@ function respond() {
 }
   else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
-    postMessage("Tian sucks.");
+    postMessage(this.req.chunks[0]);
     this.res.end();
   } else {
     console.log("don't care");
@@ -28,6 +28,13 @@ function respond() {
     this.res.end();
   }
 }
+
+/* function respond() {
+  var request = JSON.parse(this.req.chunks[0]),
+      imageRegex = \^/\/image$/; 
+  
+  if(request.text && imageRegex.test(request.text)) {
+    this.res.writeHead(200); */
 
 function postMessage(b_response) {
   var botResponse, options, body, botReq;

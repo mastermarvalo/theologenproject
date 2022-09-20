@@ -13,7 +13,7 @@ function respond() {
     postMessage("I am SIR BOTTINGTON SUPREME, RULER OF THE COSMOS!!!!!!");
     this.res.end();
   }
-  else if(request.test && jewRegex.test(request.text)) {
+  else if(request.text && jewRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("The jews are in the floorboards");
     this.res.end()

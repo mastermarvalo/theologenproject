@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/sir bot$/,
-      jewRegex = /^\/Sam Bloomburg$/; 
+       jewRegex = /^\/Sam Bloomburg$/; 
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -14,13 +14,13 @@ function respond() {
     this.res.end();
   }
   else if(request.text && jewRegex.test(request.text)) {
-    this.res.writeHead(2000);
+    this.res.writeHead(200);
     postMessage("The jews are in the floorboards");
     this.res.end()
 }
   else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
-    postMessage(this.req.chunks[0]);
+    postMessage("Tian sucks.");
     this.res.end();
   } else {
     console.log("don't care");
@@ -28,13 +28,6 @@ function respond() {
     this.res.end();
   }
 }
-
-/* function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      imageRegex = \^/\/image$/; 
-  
-  if(request.text && imageRegex.test(request.text)) {
-    this.res.writeHead(200); */
 
 function postMessage(b_response) {
   var botResponse, options, body, botReq;
@@ -50,13 +43,7 @@ function postMessage(b_response) {
   body = {
     "bot_id" : botID,
     "text" : botResponse
-    /*"attachments" : [
-    {
-        "type" : "image",
-        "url"  : "https://i.groupme.com/1000x1332.jpeg.d729badedaa64411b553b86b2324e3b8"
-    }
-  ]
-  */};
+  };
 
   console.log('sending ' + botResponse + ' to ' + botID);
 

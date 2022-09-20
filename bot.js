@@ -20,7 +20,7 @@ function respond() {
 }
   else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
-    postMessage(this.req.chunks[0]);
+    postMessage("Tian sucks.");
     this.res.end();
   } else {
     console.log("don't care");

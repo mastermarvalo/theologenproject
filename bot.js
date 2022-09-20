@@ -14,7 +14,7 @@ function respond() {
     this.res.end();
   }
   else if(request.text && jewRegex.test(request.text)) {
-    this.res.writeHead(200);
+    this.res.writeHead(2000);
     postMessage("The jews are in the floorboards");
     this.res.end()
 }

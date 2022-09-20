@@ -50,7 +50,12 @@ function postMessage(b_response) {
   body = {
     "bot_id" : botID,
     "text" : botResponse
-    "picture_url" : "https://i.groupme.com/1000x1332.jpeg.d729badedaa64411b553b86b2324e3b8"
+    "attachments" : [
+    {
+        "type" : "image",
+        "url"  : "https://i.groupme.com/1000x1332.jpeg.d729badedaa64411b553b86b2324e3b8"
+    }
+  ]
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);

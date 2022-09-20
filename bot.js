@@ -14,9 +14,9 @@ function respond() {
     this.res.end();
   }
   else if(request.test && jewRegex.test(request.text)) {
-  this.res.writeHead(200);
-  postMessage("The jews are in the floorboards");
-  this.res.end()
+    this.res.writeHead(200);
+    postMessage("The jews are in the floorboards");
+    this.res.end()
 }
   else if(request.sender_id == "28940258") {
     this.res.writeHead(200);
